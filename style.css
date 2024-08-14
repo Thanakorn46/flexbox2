@@ -1,0 +1,130 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7ab5f0;
+    font-family: "Montserrat", sans-serif;
+    color: #ff4ff3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Header and Footer */
+.header, .footer {
+    padding: 15px;
+    background-color: rgba(255, 62, 165, 0.7);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.content1 {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 2px solid #FF3EA5;
+    padding: 20px;
+    min-height: 200px;
+}
+
+.content2 {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content2 > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 1;
+}
+
+.content2 > div > div {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid #FF3EA5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 200px;
+    color: #FFF;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content1, .content2 {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header, .footer {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .content2 > div {
+        flex-direction: column;
+    }
+
+    .content2 > div > div {
+        min-height: 150px;
+        font-size: 1rem;
+    }
+}
